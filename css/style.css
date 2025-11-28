@@ -1,45 +1,247 @@
-.page-wrapper {
-  z-index: 1;
+:root {
+  --azzle-bg: #f4eee6;   /* nền header giống web gốc */
+  --azzle-dark: #111111;
+  --azzle-border: #d9d3ca;
 }
 
-.gap-3x {
-  gap: 1rem;
+/* nền tổng thể giống header */
+body {
+  background-color: var(--azzle-bg);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
 }
 
-.gap-4x {
-  gap: 1.5rem;
+/* HEADER */
+.azzle-navbar {
+  background-color: var(--azzle-bg);
+  padding-block: 22px; /* chiều cao header */
 }
 
-.gap-5x {
-  gap: 2rem;
+/* giống max-w-[1320px] của Tailwind */
+.azzle-navbar .container-xl {
+  max-width: 1320px;
 }
 
-.global-container {
-  max-width: 1296px;
-  margin-inline: auto;
-  padding-inline: 1.25rem;
+/* chia 3 phần: logo | menu | button, canh giữa dọc */
+.azzle-navbar-inner {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  column-gap: 40px;
 }
 
-#section-hero .hero-wrapper {
-  padding-top: 7rem;
-  padding-bottom: 5rem;
-  border-bottom-left-radius: 50px;
-  border-bottom-right-radius: 50px;
+/* LOGO */
+.azzle-logo-link img {
+  display: block;
+  height: 23px;   /* gần như logo gốc */
+  width: auto;
 }
 
-@media (min-width: 992px) {
-  #section-hero .hero-wrapper {
-    padding-top: 8rem;
-    padding-bottom: 6rem;
+/* MENU GIỮA */
+.azzle-main-nav-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.azzle-main-nav {
+  display: inline-flex;
+  align-items: center;
+  gap: 46px;          /* khoảng cách item như web gốc */
+  font-size: 0.98rem;
+  font-weight: 500;
+}
+
+/* các link trong menu */
+.azzle-main-nav > a,
+.azzle-main-nav .azzle-nav-item-dropdown {
+  text-decoration: none;
+  color: var(--azzle-dark);
+  padding-bottom: 2px;
+}
+
+.azzle-main-nav > a:hover,
+.azzle-main-nav .azzle-nav-item-dropdown:hover {
+  opacity: 0.8;
+}
+
+/* ========== DROPDOWN ========== */
+
+/* khối bao dropdown (Demo) */
+.azzle-dropdown {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* link có text + icon */
+.azzle-nav-item-dropdown {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* icon chevron-right gốc => mặc định quay xuống dưới */
+.cheveron-right {
+  width: 10px;
+  height: auto;
+  display: block;
+  transform: rotate(90deg);       /* chỉ xuống */
+  transform-origin: center center;
+  transition: transform 0.18s ease;
+  margin-top: 1px;                /* canh hàng với chữ */
+}
+
+/* hover vào dropdown (Demo) => quay lại hướng phải */
+.azzle-dropdown:hover .cheveron-right,
+.azzle-dropdown:focus-within .cheveron-right {
+  transform: rotate(0deg);
+}
+
+/* nếu muốn icon Services cũng quay khi hover vào link: */
+.azzle-main-nav > a:hover .cheveron-right {
+  transform: rotate(0deg);
+}
+
+/* hộp menu con */
+.azzle-dropdown-menu {
+  position: absolute;
+  top: 140%;
+  left: 0;
+  min-width: 220px;
+  background-color: #ffffff;
+  border-radius: 14px;
+  padding: 10px 0;
+  box-shadow: 0 22px 50px rgba(15, 23, 42, 0.18);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  transition:
+    opacity 0.18s ease,
+    transform 0.18s ease,
+    visibility 0.18s ease;
+  z-index: 30;
+}
+
+/* hiện dropdown khi hover vào Demo */
+.azzle-dropdown:hover .azzle-dropdown-menu,
+.azzle-dropdown:focus-within .azzle-dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* item bên trong dropdown */
+.azzle-dropdown-item {
+  display: block;
+  padding: 8px 18px;
+  font-size: 0.9rem;
+  color: #111827;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.azzle-dropdown-item:hover {
+  background-color: #f3f4f6;
+}
+
+/* ========== BUTTON BÊN PHẢI ========== */
+
+.azzle-nav-right {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.azzle-btn-outline,
+.azzle-btn-primary {
+  border-radius: 999px;
+  padding: 9px 30px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+
+.azzle-btn-outline {
+  border: 1px solid var(--azzle-border);
+  background-color: transparent;
+  color: var(--azzle-dark);
+}
+
+.azzle-btn-outline:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.azzle-btn-primary {
+  border: 1px solid #000000;
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.azzle-btn-primary:hover {
+  filter: brightness(1.05);
+  color: #ffffff;
+}
+
+/* ========== RESPONSIVE ========== */
+
+@media (max-width: 992px) {
+  .azzle-navbar-inner {
+    grid-template-columns: 1fr;
+    row-gap: 16px;
+    justify-items: center;
+    text-align: center;
+  }
+
+  .azzle-main-nav {
+    gap: 24px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .azzle-nav-right {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .azzle-dropdown-menu {
+    left: 50%;
+    transform: translate(-50%, 8px);
+  }
+
+  .azzle-dropdown:hover .azzle-dropdown-menu,
+  .azzle-dropdown:focus-within .azzle-dropdown-menu {
+    transform: translate(-50%, 0);
   }
 }
+/* ----- Sửa khoảng cách & chống xuống dòng ----- */
 
-.btn-pill {
-  border-radius: 50px;
+/* Toàn bộ item trong menu đều là inline-flex để chữ + icon nằm cùng 1 dòng */
+.azzle-main-nav > a,
+.azzle-nav-item-dropdown {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;           /* khoảng cách chữ – icon */
+  text-decoration: none;
+  color: var(--azzle-dark);
+  padding-bottom: 2px;
 }
 
-@media (min-width: 992px) {
-  .d-lg-inline-block {
-    display: inline-block !important;
+/* Giảm nhẹ gap giữa các mục nếu cần */
+.azzle-main-nav {
+  display: inline-flex;
+  align-items: center;
+  gap: 40px;          /* trước là 46px, có thể chỉnh 38–44 tuỳ mắt bạn */
+  font-size: 0.98rem;
+  font-weight: 500;
+}
+
+/* Không cho item trong menu bị xuống dòng ở desktop */
+@media (min-width: 993px) {
+  .azzle-main-nav {
+    white-space: nowrap;
   }
 }
