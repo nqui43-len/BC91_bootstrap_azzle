@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <title>Azzle - BC91 - Qui & Lượng</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <!-- icon trang web -->
+    <link rel="icon" type="image/png" href="/img/PNG/favicon.png" />
+  </head>
+
+  <body>
+    <!-- Header Start -->
+    <header
+      id="sticky-menu"
+      class="site-header site-header--absolute is--white py-3"
+    >
+      <div class="global-container">
+        <nav
+          class="navbar navbar-expand-lg d-flex align-items-center justify-content-between p-0"
+        >
+          <!-- Logo -->
+          <a class="navbar-brand me-3" href="/">
+            <img
+              src="/img/PNG/logo-dark.png"
+              alt="AIMass"
+              width="96"
+              height="24"
+            />
+          </a>
+
+          <!-- Nút toggle mobile -->
+          <button
+            class="navbar-toggler border-0 d-lg-none"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNavbar"
+            aria-controls="mainNavbar"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- Menu + nút Login / Sign up -->
+          <div class="collapse navbar-collapse" id="mainNavbar">
+            <!-- Menu trái -->
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-3x">
+              <!-- Demo -->
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="demoDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Demo
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="demoDropdown">
+                  <li><a class="dropdown-item" href="/">home 01</a></li>
+                  <li><a class="dropdown-item" href="/index-2">home 02</a></li>
+                  <li><a class="dropdown-item" href="/index-3">home 03</a></li>
+                  <li><a class="dropdown-item" href="/index-4">home 04</a></li>
+                </ul>
+              </li>
+
+              <!-- About -->
+              <li class="nav-item">
+                <a class="nav-link" href="/about">About</a>
+              </li>
+
+              <!-- Services -->
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="servicesDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Services
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                  <li>
+                    <a class="dropdown-item" href="/services">Services</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="/service-details"
+                      >Service Details</a
+                    >
+                  </li>
+                </ul>
+              </li>
+
+              <!-- Pages (có submenu nhiều lớp – vẫn giữ cấu trúc ul/li cũ bên trong) -->
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="pagesDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Pages
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="pagesDropdown">
+                  <!-- Blogs -->
+                  <li class="dropdown-submenu">
+                    <a class="dropdown-item" href="#">Blogs ▸</a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="/blog">blogs</a></li>
+                      <li>
+                        <a class="dropdown-item" href="/blog-details"
+                          >blog details</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+
+                  <!-- Team -->
+                  <li class="dropdown-submenu">
+                    <a class="dropdown-item" href="#">Team ▸</a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="/teams">Teams</a></li>
+                      <li>
+                        <a class="dropdown-item" href="/team-details"
+                          >Teams Details</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+
+                  <!-- FAQ -->
+                  <li class="dropdown-submenu">
+                    <a class="dropdown-item" href="#">FAQ ▸</a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="/faq">FAQ-1</a></li>
+                      <li><a class="dropdown-item" href="/faq-2">FAQ-2</a></li>
+                    </ul>
+                  </li>
+
+                  <!-- Portfolio -->
+                  <li class="dropdown-submenu">
+                    <a class="dropdown-item" href="#">Portfolio ▸</a>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a class="dropdown-item" href="/portfolio">Portfolio</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="/portfolio-details"
+                          >Portfolio Details</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+
+                  <!-- Pricing -->
+                  <li>
+                    <a class="dropdown-item" href="/pricing">Pricing</a>
+                  </li>
+
+                  <!-- Utilities -->
+                  <li class="dropdown-submenu">
+                    <a class="dropdown-item" href="#">Utilities ▸</a>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a class="dropdown-item" href="/error-404">Error 404</a>
+                      </li>
+                      <li><a class="dropdown-item" href="/login">Login</a></li>
+                      <li>
+                        <a class="dropdown-item" href="/signup">Signup</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="/reset-password"
+                          >Reset Password</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+
+              <!-- Contact -->
+              <li class="nav-item">
+                <a class="nav-link" href="/contact">Contact</a>
+              </li>
+            </ul>
+
+            <!-- Nút Login / Sign up bên phải -->
+            <div class="d-flex align-items-center gap-3x ms-4">
+              <a
+                href="/login"
+                class="btn btn-outline-secondary btn-pill d-none d-lg-inline-block"
+              >
+                Login
+              </a>
+              <a
+                href="/signup"
+                class="btn btn-dark btn-pill d-none d-lg-inline-block"
+              >
+                Sign up free
+              </a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- Header End -->
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

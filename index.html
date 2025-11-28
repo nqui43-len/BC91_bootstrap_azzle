@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="vi" data-bs-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Azzle - BC91 - Qui & Lượng</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- CSS -->
+     <link rel="stylesheet" href="/css/style.css" />
+     <link rel="icon" type="image/png" href="/img/PNG/favicon.png" />
+  </head>
+  <body>
+    <!-- NAVBAR: sticky + collapse trên mobile -->
+    <nav
+      class="navbar navbar-expand-lg bg-body-tertiary sticky-top border-bottom"
+    >
+      <div class="container">
+        <a class="navbar-brand fw-semibold" href="#">YourName</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNav"
+          aria-controls="mainNav"
+          aria-expanded="false"
+          aria-label="Mở menu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="#hero" aria-current="page"
+                >Trang chủ</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">Giới thiệu</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#projects">Dự án</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Liên hệ</a>
+            </li>
+          </ul>
+          <button
+            id="themeToggle"
+            class="btn btn-outline-secondary ms-lg-3"
+            type="button"
+            aria-pressed="false"
+          >
+            Dark mode
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <main id="main-content">
+      <!-- HERO -->
+      <section id="hero" class="py-5">
+        <div class="container">
+          <div class="row align-items-center g-4">
+            <div class="col-lg-6">
+              <h1 class="display-5 fw-bold mb-3">Xin chào, mình là YourName</h1>
+              <p class="lead text-body-secondary">
+                Lập trình viên web. Đây là portfolio một trang xây bằng
+                Bootstrap 5.3.
+              </p>
+              <div class="d-flex gap-3">
+                <a class="btn btn-primary btn-lg" href="#projects">Xem dự án</a>
+                <a class="btn btn-outline-secondary btn-lg" href="#contact"
+                  >Liên hệ</a
+                >
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <!-- Dùng ô minh họa; sau này bạn có thể thay bằng ảnh/video -->
+              <div
+                class="placeholder-visual ratio ratio-16x9 d-flex align-items-center justify-content-center"
+              >
+                <span class="text-body-secondary">(Ảnh/Video minh họa)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about" class="py-5 border-top">
+        <div class="container">
+          <div class="row g-4">
+            <div class="col-lg-6">
+              <h2 class="fw-bold mb-3">Giới thiệu</h2>
+              <p>
+                Mô tả ngắn về bạn: kỹ năng, lĩnh vực quan tâm, triết lý làm
+                việc. Viết 4–6 câu là đủ, tránh quá dài.
+              </p>
+              <ul class="list-unstyled">
+                <li class="mb-2">
+                  • Frontend: HTML, CSS, JavaScript, Bootstrap
+                </li>
+                <li class="mb-2">• Backend (tuỳ chọn): Node/Express, v.v.</li>
+                <li class="mb-2">• Công cụ: Git, VS Code</li>
+              </ul>
+            </div>
+            <div class="col-lg-6">
+              <div class="row row-cols-1 row-cols-sm-2 g-3">
+                <div class="col">
+                  <div class="p-4 bg-body-tertiary rounded-3 h-100">
+                    <h3 class="h5">Kinh nghiệm</h3>
+                    <p class="mb-0 small text-body-secondary">
+                      2–3 dòng tóm tắt.
+                    </p>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="p-4 bg-body-tertiary rounded-3 h-100">
+                    <h3 class="h5">Thành tựu</h3>
+                    <p class="mb-0 small text-body-secondary">
+                      Giải thưởng / chứng chỉ.
+                    </p>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="p-4 bg-body-tertiary rounded-3 h-100">
+                    <h3 class="h5">Dự án cá nhân</h3>
+                    <p class="mb-0 small text-body-secondary">Mô tả ngắn.</p>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="p-4 bg-body-tertiary rounded-3 h-100">
+                    <h3 class="h5">Sở thích</h3>
+                    <p class="mb-0 small text-body-secondary">
+                      Đọc, viết, du lịch…
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROJECTS -->
+      <section id="projects" class="py-5 border-top">
+        <div class="container">
+          <div class="d-flex align-items-center justify-content-between mb-4">
+            <h2 class="fw-bold mb-0">Dự án tiêu biểu</h2>
+            <a
+              class="btn btn-outline-primary"
+              data-bs-toggle="modal"
+              data-bs-target="#projectModal"
+              >Giới thiệu nhanh</a
+            >
+          </div>
+
+          <!-- Lưới card 6 dự án -->
+          <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+            <!-- Card 1 -->
+            <div class="col">
+              <div class="card h-100">
+                <div class="ratio ratio-16x9">
+                  <!-- Có thể thay bằng <img src="..." class="card-img-top" alt="Ảnh dự án A"> -->
+                  <div
+                    class="bg-body-secondary d-flex align-items-center justify-content-center rounded-top"
+                  >
+                    <span class="text-body-secondary">Ảnh dự án</span>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <h3 class="h5 card-title">Dự án A</h3>
+                  <p class="card-text small text-body-secondary">
+                    Mô tả ngắn 1–2 câu.
+                  </p>
+                  <a href="#" class="btn btn-sm btn-primary disabled"
+                    >Xem live (demo)</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Sao chép khối .col cho các card khác -->
+            <div class="col">
+              <div class="card h-100">
+                <div class="ratio ratio-16x9">
+                  <div
+                    class="bg-body-secondary d-flex align-items-center justify-content-center rounded-top"
+                  >
+                    <span class="text-body-secondary">Ảnh dự án</span>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <h3 class="h5 card-title">Dự án B</h3>
+                  <p class="card-text small text-body-secondary">
+                    Mô tả ngắn 1–2 câu.
+                  </p>
+                  <a href="#" class="btn btn-sm btn-outline-secondary disabled"
+                    >Mã nguồn</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Thêm 4 card nữa tương tự -->
+            <div class="col">
+              <div class="card h-100">
+                <div class="ratio ratio-16x9">
+                  <div
+                    class="bg-body-secondary d-flex align-items-center justify-content-center rounded-top"
+                  >
+                    <span class="text-body-secondary">Ảnh dự án</span>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <h3 class="h5 card-title">Dự án C</h3>
+                  <p class="card-text small text-body-secondary">Mô tả…</p>
+                  <a href="#" class="btn btn-sm btn-outline-secondary disabled"
+                    >Mã nguồn</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <div class="ratio ratio-16x9">
+                  <div
+                    class="bg-body-secondary d-flex align-items-center justify-content-center rounded-top"
+                  >
+                    <span class="text-body-secondary">Ảnh dự án</span>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <h3 class="h5 card-title">Dự án D</h3>
+                  <p class="card-text small text-body-secondary">Mô tả…</p>
+                  <a href="#" class="btn btn-sm btn-outline-secondary disabled"
+                    >Mã nguồn</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <div class="ratio ratio-16x9">
+                  <div
+                    class="bg-body-secondary d-flex align-items-center justify-content-center rounded-top"
+                  >
+                    <span class="text-body-secondary">Ảnh dự án</span>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <h3 class="h5 card-title">Dự án E</h3>
+                  <p class="card-text small text-body-secondary">Mô tả…</p>
+                  <a href="#" class="btn btn-sm btn-outline-secondary disabled"
+                    >Mã nguồn</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <div class="ratio ratio-16x9">
+                  <div
+                    class="bg-body-secondary d-flex align-items-center justify-content-center rounded-top"
+                  >
+                    <span class="text-body-secondary">Ảnh dự án</span>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <h3 class="h5 card-title">Dự án F</h3>
+                  <p class="card-text small text-body-secondary">Mô tả…</p>
+                  <a href="#" class="btn btn-sm btn-outline-secondary disabled"
+                    >Mã nguồn</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="py-5 border-top">
+        <div class="container">
+          <div class="row g-4">
+            <div class="col-lg-6">
+              <h2 class="fw-bold mb-3">Liên hệ</h2>
+              <p class="text-body-secondary">
+                Điền form, mình sẽ phản hồi sớm nhất.
+              </p>
+
+              <!-- Thông báo thành công (ẩn mặc định) -->
+              <div
+                id="formSuccess"
+                class="alert alert-success d-none"
+                role="alert"
+              >
+                Cảm ơn bạn! Thông tin đã được gửi (mô phỏng).
+              </div>
+
+              <form class="needs-validation" novalidate id="contactForm">
+                <div class="form-floating mb-3">
+                  <input
+                    type="text"
+                    id="fullname"
+                    class="form-control"
+                    placeholder="Họ tên"
+                    required
+                  />
+                  <label for="fullname">Họ tên</label>
+                  <div class="invalid-feedback">Vui lòng nhập họ tên.</div>
+                </div>
+
+                <div class="form-floating mb-3">
+                  <input
+                    type="email"
+                    id="email"
+                    class="form-control"
+                    placeholder="name@example.com"
+                    required
+                  />
+                  <label for="email">Email</label>
+                  <div class="invalid-feedback">Email chưa hợp lệ.</div>
+                </div>
+
+                <div class="form-floating mb-3">
+                  <textarea
+                    id="message"
+                    class="form-control"
+                    placeholder="Nội dung"
+                    style="height: 140px"
+                    required
+                  ></textarea>
+                  <label for="message">Nội dung</label>
+                  <div class="invalid-feedback">Vui lòng nhập nội dung.</div>
+                </div>
+
+                <button type="submit" class="btn btn-primary">
+                  Gửi liên hệ
+                </button>
+              </form>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="p-4 bg-body-tertiary rounded-3 h-100">
+                <h3 class="h5 mb-3">Thông tin khác</h3>
+                <ul class="list-unstyled mb-0">
+                  <li class="mb-2">
+                    <strong>Email:</strong> yourname@email.com
+                  </li>
+                  <li class="mb-2">
+                    <strong>Điện thoại:</strong> 0123 456 789
+                  </li>
+                  <li class="mb-2">
+                    <strong>Địa điểm:</strong> Hà Nội / TP.HCM
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="py-4 bg-body-tertiary border-top">
+      <div class="container small text-center">
+        © 2025 — YourName. Làm với Bootstrap 5.3.
+      </div>
+    </footer>
+
+    <!-- Modal demo ở phần Projects -->
+    <div
+      class="modal fade"
+      id="projectModal"
+      tabindex="-1"
+      aria-labelledby="projectModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="projectModalLabel">
+              Giới thiệu nhanh
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Đóng"
+            ></button>
+          </div>
+          <div class="modal-body">
+            Đây là modal demo. Bạn có thể thay thành nội dung mô tả dự án nổi
+            bật.
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Đóng
+            </button>
+            <a href="#projects" class="btn btn-primary">Đi tới Dự án</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap Bundle (JS + Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JS nhỏ: toggle theme + validation form -->
+    <script>
+      // Toggle Dark/Light
+      const htmlEl = document.documentElement;
+      document.getElementById("themeToggle")?.addEventListener("click", (e) => {
+        const next =
+          htmlEl.getAttribute("data-bs-theme") === "dark" ? "light" : "dark";
+        htmlEl.setAttribute("data-bs-theme", next);
+        e.currentTarget.setAttribute("aria-pressed", String(next === "dark"));
+        e.currentTarget.textContent =
+          next === "dark" ? "Light mode" : "Dark mode";
+        localStorage.setItem("theme", next);
+      });
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme) {
+        htmlEl.setAttribute("data-bs-theme", savedTheme);
+        const btn = document.getElementById("themeToggle");
+        if (btn) {
+          btn.setAttribute("aria-pressed", String(savedTheme === "dark"));
+          btn.textContent = savedTheme === "dark" ? "Light mode" : "Dark mode";
+        }
+      }
+
+      // Validation form (chuẩn Bootstrap)
+      (() => {
+        "use strict";
+        const form = document.getElementById("contactForm");
+        form.addEventListener(
+          "submit",
+          (event) => {
+            if (!form.checkValidity()) {
+              event.preventDefault();
+              event.stopPropagation();
+            } else {
+              // Mô phỏng gửi thành công
+              event.preventDefault();
+              document.getElementById("formSuccess").classList.remove("d-none");
+              form.reset();
+              form.classList.remove("was-validated");
+            }
+            form.classList.add("was-validated");
+          },
+          false
+        );
+      })();
+    </script>
+  </body>
+</html>
